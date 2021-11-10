@@ -1,9 +1,9 @@
 html, body{
-    height: 100%;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    background-color: #166d3b;
-    background-image: linear-gradient(147deg, #000000 0%, #166d3b 74%) no-repeat;
+    background: #166d3b;
+    background: -webkit-linear-gradient(145deg, #000000 0%, #166d3b 74%);
+    background: linear-gradient(145deg, #000000 0%, #166d3b 74%);
 }
 
 a{
