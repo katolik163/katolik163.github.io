@@ -11,13 +11,19 @@ a{
     text-decoration: none;
 }
 
+.wrapper{
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .link-title{
     font-size: 16.1px;
     color: #d9d9cf;
 }
 
 .link-subtitle{
-    font-size: 14.49px;
+    font-size: 14px;
     color: #d9d9cf;
     font-weight: 300;
     margin: 2.8px 0px 0px;
@@ -61,7 +67,7 @@ a{
 
 hr{
     display: inline-block;
-    width: 45%;
+    width: 40%;
 }
 
 aside{
