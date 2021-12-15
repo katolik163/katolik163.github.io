@@ -1,0 +1,196 @@
+html, body{
+    height: 100%;
+    min-height: 100%;
+    display: block;
+    background-image: linear-gradient(45deg, rgb(20, 21, 49) 0%, rgb(32, 18, 45) 100%);
+}
+
+*, :after, :before, body, html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    color: rgba(0, 0, 0, .85);
+    font-size: 15px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-variant: 1.5715;
+    background-color: #fff;
+    font-feature-settings: "tnum", "tnum", "tnum";
+}
+
+div{
+    display: block;
+}
+
+#root{
+    height: 100%;
+}
+
+.BlocksWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.css-a1::before{
+    content: "";
+    inset: 0px;
+    position: absolute;
+}
+
+@media screen and (max-width: 600px) {
+    .BlocksWrapper-inner{
+        margin: 32px 16px;
+        padding: 8 px 0;
+    }
+
+    .Block{
+        padding: 10px 16px;
+    }
+}
+
+.BlocksWrapper-inner{
+    max-width: calc(100% - 32px);
+    width: 600px;
+    overflow: hidden;
+    margin: 64px 32px;
+    padding: 24px 0;
+    position: relative;
+}
+
+.css-b2::before{
+    content: "";
+    inset: 0px;
+    position: absolute;
+    border-radius: 28px;
+    opacity: 1;
+    background-color: rgb(32, 32, 32);
+}
+
+.Block{
+    position: relative;
+    min-height: 15px;
+    padding: 10px 32px;
+}
+
+.Cover{
+    display: flex;
+    flex-direction: column;
+}
+
+.Cover .info{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.Cover .logo-wrapper{
+    display: flex;
+}
+
+.Cover.no-image .logo-wrapper>img{
+    margin-top: 0;
+}
+
+.Cover .logo-wrapper>img{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    margin-top: -50%;
+}
+
+.Cover .title-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.Cover .subtitle .Cover .title.verified{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.Cover .title{
+    padding-top: 8px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    word-break: break-word;
+}
+
+.Cover .subtitle{
+    opacity: .6;
+    padding-top: 2px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.Link.icon-label-center{
+    padding-left: 54px;
+    padding-right: 54px;
+}
+
+.Link{
+    display: flex;
+    padding: 2px 16px;
+    min-height: 56px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all .2s;
+    position: relative;
+}
+
+.Link-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 16px;
+    height: 26px;
+    width: 26px;
+    overflow: hidden;
+}
+
+.Icon{
+    display: inline-block;
+}
+
+i{
+    font-style: italic;
+}
+
+.Link-caption, .Link-label{
+    text-align: center;
+}
+
+.Link-caption{
+    opacity: .8;
+    font-size: 90%;
+}
+
+.Branding{
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    padding: 20px;
+    margin-top: 10px;
+    opacity: .8;
+    transition: all .2s;
+}
+
+.Branding>img{
+    margin: 0 6px;
+}
