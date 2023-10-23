@@ -1,4 +1,4 @@
-html, body{
+html, body {
     height: 100%;
     min-height: 100%;
     display: block;
@@ -9,29 +9,29 @@ html, body{
     background-size: cover;
 }
 
-*, :after, :before, body, html{
+*, :after, :before, body, html {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     color: rgba(0, 0, 0, .85);
     font-size: 15px;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-variant: 1.5715;
     background-color: #fff;
     font-feature-settings: "tnum", "tnum", "tnum";
 }
 
-div{
+div {
     display: block;
 }
 
-#root{
+#root {
     height: 100%;
 }
 
-.BlocksWrapper{
+.BlocksWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +41,7 @@ div{
     position: relative;
 }
 
-.css-a1::before{
+.background::before {
     content: "";
     inset: 0px;
     position: absolute;
@@ -58,7 +58,7 @@ div{
     }
 }
 
-.BlocksWrapper-inner{
+.BlocksWrapper-inner {
     max-width: calc(100% - 32px);
     width: 600px;
     overflow: hidden;
@@ -67,7 +67,7 @@ div{
     position: relative;
 }
 
-.css-b2::before{
+.windowbackground::before {
     content: "";
     inset: 0px;
     position: absolute;
@@ -76,33 +76,33 @@ div{
     background-color: rgb(32, 32, 32);
 }
 
-.Block{
+.Block {
     position: relative;
     min-height: 15px;
     padding: 10px 32px;
 }
 
-.Cover{
+.Cover {
     display: flex;
     flex-direction: column;
 }
 
-.Cover .info{
+.Cover .info {
     display: flex;
     align-items: center;
     position: relative;
     flex-direction: column;
 }
 
-.Cover .logo-wrapper{
+.Cover .logo-wrapper {
     display: flex;
 }
 
-.Cover.no-image .logo-wrapper>img{
+.Cover.no-image .logo-wrapper > img {
     margin-top: 0;
 }
 
-.Cover .logo-wrapper>img{
+.Cover .logo-wrapper > img{
     position: relative;
     height: 100px;
     width: 100px;
@@ -111,19 +111,19 @@ div{
     margin-top: -50%;
 }
 
-.Cover .title-wrapper{
+.Cover .title-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 5px 0;
 }
 
-.Cover .subtitle .Cover .title.verified{
+.Cover .subtitle .Cover {
     padding-left: 24px;
     padding-right: 24px;
 }
 
-.Cover .title{
+.Cover .title {
     padding-top: 8px;
     font-weight: 600;
     text-align: center;
@@ -132,19 +132,19 @@ div{
     word-break: break-word;
 }
 
-.Cover .subtitle{
+.Cover .subtitle {
     opacity: .6;
     padding-top: 2px;
     text-align: center;
     word-break: break-word;
 }
 
-.Link.icon-label-center{
+.Link.icon-label-center {
     padding-left: 54px;
     padding-right: 54px;
 }
 
-.Link{
+.Link {
     display: flex;
     padding: 2px 16px;
     min-height: 56px;
@@ -156,7 +156,7 @@ div{
     position: relative;
 }
 
-.Link-icon{
+.Link-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,24 +167,24 @@ div{
     overflow: hidden;
 }
 
-.Icon{
+.Icon {
     display: inline-block;
 }
 
-i{
+i {
     font-style: italic;
 }
 
-.Link-caption, .Link-label{
+.Link-caption, .Link-label {
     text-align: center;
 }
 
-.Link-caption{
+.Link-caption {
     opacity: .8;
     font-size: 90%;
 }
 
-.Branding{
+.Branding {
     display: flex;
     align-items: center;
     color: inherit;
@@ -195,6 +195,6 @@ i{
     transition: all .2s;
 }
 
-.Branding>img{
+.Branding > img {
     margin: 0 6px;
 }
