@@ -1,85 +1,89 @@
-html, body {
-    height: 100%;
-    min-height: 100%;
-    display: block;
-    background-image: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/978460/930dfaf3b9e7c47cf06d007f47e28e3bf9098442.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 *, :after, :before, body, html {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    color: rgba(0, 0, 0, .85);
-    font-size: 15px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-variant: 1.5715;
-    background-color: #fff;
-    font-feature-settings: "tnum", "tnum", "tnum";
+html, body {
+    height: 100%;
+    min-height: 100%;
 }
 
-div {
-    display: block;
+body {
+    font-feature-settings: "tnum", "tnum", "tnum";
+    background-color: #fff;
+    color: rgba(0, 0, 0, .85);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    margin: 0;
 }
 
 #root {
-    height: 100%;
+    display: flex;
+    min-height: 100%;
 }
 
 .BlocksWrapper {
+    align-content: stretch;
+    align-items: center;
+    background-position: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: stretch;
-    min-width: 100%;
     min-height: 100%;
+    min-width: 100%;
     position: relative;
 }
 
-.background::before {
-    content: "";
-    inset: 0px;
+.BlocksWrapper:before {
+    bottom: 0;
+    content: "" !important;
+    left: 0;
     position: absolute;
-}
-
-@media screen and (max-width: 600px) {
-    .BlocksWrapper-inner{
-        margin: 32px 16px;
-        padding: 8 px 0;
-    }
-
-    .Block{
-        padding: 10px 16px;
-    }
+    right: 0;
+    top: 0;
 }
 
 .BlocksWrapper-inner {
-    max-width: calc(100% - 32px);
-    width: 600px;
-    overflow: hidden;
     margin: 64px 32px;
+    max-width: calc(100% - 32px);
+    overflow: hidden;
     padding: 24px 0;
     position: relative;
+    width: 600px;
 }
 
-.windowbackground::before {
+@media screen and (max-width:600px) {
+    .BlocksWrapper-inner {
+        margin: 32px 16px;
+        padding: 8px 0;
+    }
+}
+
+.background:before {
+    background-image: url(https://cdn.steamstatic.com/steamcommunity/public/images/items/525300/1fe4f07578b3dd715987eabaa9303180861f497e.jpg);
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     content: "";
     inset: 0px;
     position: absolute;
-    border-radius: 28px;
     opacity: 1;
+}
+
+.window:before {
+    content: "";
+    inset: 0px;
+    position: absolute;
+    border-radius: 14px;
+    opacity: 0.9;
     background-color: rgb(32, 32, 32);
 }
 
 .Block {
-    position: relative;
     min-height: 15px;
     padding: 10px 32px;
+    position: relative;
 }
 
 .Cover {
@@ -87,49 +91,60 @@ div {
     flex-direction: column;
 }
 
-.Cover .info {
-    display: flex;
-    align-items: center;
+.Cover .image {
+    overflow: hidden;
     position: relative;
+    width: 100%;
+}
+
+.Cover .info {
+    align-items: center;
+    display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .Cover .logo-wrapper {
     display: flex;
 }
 
-.Cover.no-image .logo-wrapper > img {
-    margin-top: 0;
+.Cover .logo-wrapper > img {
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    height: 100px;
+    margin-top: -50%;
+    position: relative;
+    width: 100px;
 }
 
-.Cover .logo-wrapper > img{
-    position: relative;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
-    margin-top: -50%;
+.Cover.no-image .logo-wrapper > img {
+    margin-top: 0 !important;
 }
 
 .Cover .title-wrapper {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 5px 0;
 }
 
-.Cover .subtitle .Cover {
+.Cover .title {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 8px;
+    position: relative;
+    text-align: center;
+    word-break: break-word;
+}
+
+.Cover .subtitle, .Cover .title.verified {
     padding-left: 24px;
     padding-right: 24px;
 }
 
-.Cover .title {
-    padding-top: 8px;
-    font-weight: 600;
-    text-align: center;
-    position: relative;
-    font-size: 16px;
-    word-break: break-word;
+.Cover .title.verified > img {
+    height: 14px;
+    width: 14px;
 }
 
 .Cover .subtitle {
@@ -139,40 +154,41 @@ div {
     word-break: break-word;
 }
 
-.Link.icon-label-center {
-    padding-left: 54px;
-    padding-right: 54px;
-}
-
 .Link {
+    align-items: center;
     display: flex;
-    padding: 2px 16px;
-    min-height: 56px;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    min-height: 56px;
+    padding: 2px 16px;
+    position: relative;
     text-decoration: none;
     transition: all .2s;
-    position: relative;
+}
+
+.Link:hover {
+    opacity: .85 !important;
+    transform: translateY(-2px);
 }
 
 .Link-icon {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 16px;
+    display: flex;
     height: 26px;
-    width: 26px;
+    justify-content: center;
+    left: 16px;
     overflow: hidden;
+    position: absolute;
+    width: 26px;
 }
 
-.Icon {
+.Link-icon img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.inline-block {
     display: inline-block;
-}
-
-i {
-    font-style: italic;
 }
 
 .Link-caption, .Link-label {
@@ -180,18 +196,23 @@ i {
 }
 
 .Link-caption {
-    opacity: .8;
     font-size: 90%;
+    opacity: .8;
+}
+
+.Link.icon-label-center {
+    padding-left: 58px;
+    padding-right: 58px;
 }
 
 .Branding {
-    display: flex;
     align-items: center;
     color: inherit;
-    text-decoration: none;
-    padding: 20px;
+    display: flex;
     margin-top: 10px;
     opacity: .8;
+    padding: 20px;
+    text-decoration: none;
     transition: all .2s;
 }
 
