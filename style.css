@@ -219,3 +219,20 @@ body {
 .Branding > img {
     margin: 0 6px;
 }
+
+.Branding:hover span:last-child {
+    text-decoration: underline;
+}
+
+.Branding:hover img {
+    animation: brandingBounce .2s infinite alternate;
+}
+
+@keyframes brandingBounce {
+    0% {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-6px);
+    }
+}
